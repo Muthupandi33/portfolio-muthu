@@ -11,7 +11,7 @@ import PageNotFound from './routing/pageRoute/PageNotFound'
 const App = () => {
   return (
     <div>
-    <BrowserRouter>
+    <BrowserRouter >
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
