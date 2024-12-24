@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/portfolio-muthu/static/css/main.7bfac682.css",
+    "main.js": "/portfolio-muthu/static/js/main.57d916a7.js",
+    "index.html": "/portfolio-muthu/index.html",
+    "main.7bfac682.css.map": "/portfolio-muthu/static/css/main.7bfac682.css.map",
+    "main.57d916a7.js.map": "/portfolio-muthu/static/js/main.57d916a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bfac682.css",
+    "static/js/main.57d916a7.js"
+  ]
+}
