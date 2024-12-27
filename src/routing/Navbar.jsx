@@ -1,5 +1,6 @@
 import React, {useState , useEffect} from 'react'
 import { Link } from 'react-router-dom';
+import portfolioIcon from './pageRoute/src-doc/portfolio.png';
 
 const iconStyle = {
   width: '70px',
@@ -30,13 +31,12 @@ const Navbar = () => {
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
-
+  
 
   return (
     <div id='navBlock' >
        <section>
-
-           <img style={iconStyle} src="./portfolio.png" alt="Portfolio-icon" />
+           <img style={iconStyle} src={portfolioIcon} alt="Portfolio-icon" />
             
            <div className="darkMode" title="Dark Mode">
           <button id="darkModebtn" onClick={toggleDarkMode}>
@@ -48,15 +48,15 @@ const Navbar = () => {
                 Muthupandi M
             </div>
 
-           <ul>
-            
+           <ul id='options' >
+             
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/project">Project</Link></li>
             <li><Link to="/experience">Experience</Link></li>
            </ul>
-
+            <button id='bt'>_</button>
        </section>
 
     </div>

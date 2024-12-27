@@ -1,88 +1,516 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-#navBlock{
-    width: 100%;
-    height:80px;
-    background-color: #ccc;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#navBlock section{
-    width: 90%;
-    height: inherit;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* NavBlock */
+#navBlock {
+  width: 100%;
+  height: 80px;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Sticky navbar */
+  z-index: 1000; /* Ensure navbar stays on top */
 }
 
-#navBlock section ul{
-    display: flex;
-    list-style-type: none;
-     
-}
-#navBlock section ul li a{
-    text-decoration: none;
-    margin-left: 45px;
-    font-size: 30px;
+#navBlock section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Default Navbar Styles */
-#navbar {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px;
-  }
-  
-  #navbar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #navbar ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  #navbar ul li a {
-    text-decoration: none;
-    color: #000000;
-  }
-  
-  /* Dark Mode Styles */
-  #navbar.dark {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  button#darkModebtn {
-    background: grey;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: inherit;
-  
-  }
-  
-  button#darkModebtn:focus {
-    outline: none;
-  }
-  #unknown{
-    padding-top: 10%;
+#navBlock section ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#navBlock section ul li a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+  color: blue;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#navBlock section ul li a:hover {
+  color: white;
+  background: red;
+}
+
+#navBlock section ul li a.active {
+  color: black;
+  background-color: white;
+}
+
+
+
+#options li a {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 0 5px 0px #ccc;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#navBlock.dark {
+  background-color: #333;
+}
+
+button#darkModebtn {
+  background: gray;
+  border: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button#darkModebtn:hover {
+  background: black;
+}
+
+#bt{
+  visibility: hidden;
+}
+
+.logo-block{
+    
+    flex-basis: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: inherit;
+    height: inherit;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: oblique;
+
+}
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  #navBlock section ul {
+    flex-direction: column;
+    align-items: flex-start;
+    
   }
 
-  #Pagenot{
-    color: rgb(243, 10, 10);
-    height: 80px;
-    width: 80px;
+  #navBlock section ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    align-items: flex-start;
+   
   }
+
+  #navBlock section ul li a {
+    width: 100%;
+    text-align: left;
+    display: block;
+    cursor: pointer;
+  }
+  #navBlock section ul{
+    position: relative;
+    visibility: hidden;
+  }
+  #bt{
+    visibility: visible;
+  }
+
+  #navBlock{
+    height: 450px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100vh;
+    background-color: gray;
+    transition: 0.3s;
+    position: relative;
+  }
+}
+
+
+/* Home */
+#userDetails {
+  margin-top: 50px;
+  padding-top: 30px;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#userImage {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 70%;
+  height: 10vh;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+#userImage>img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20% 20% 20% 20%;
+  object-fit: center;
+
+}
+
+#userName {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#userName>p {
+
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: oblique;
+}
+
+.nameTag {
+  margin: 7px 0px;
+  font-size: 48px;
+
+  background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(#CA4246 16.666%,
+          #E16541 16.666%,
+          #E16541 33.333%,
+          #F18F43 33.333%,
+          #F18F43 50%,
+          #8B9862 50%,
+          #8B9862 66.666%,
+          #3065d6 66.666%,
+          #2b5ecb 83.333%,
+          #A7489B 83.333%);
+
+  background-size: 57%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.assets {
+  display: flex;
+  margin-top: 20px;
+}
+
+.assets>.connect,
+#gitHubBtn {
+  padding: 10px;
+  width: 120px;
+  background-color: bisque;
+  border: 2px solid rgba(255, 255, 255, 0.526);
+  margin: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+  transition: all 300ms linear;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.connect:hover,
+#gitHubBtn:hover {
+  border: 2px solid rgba(43, 11, 206, 0.562);
+  cursor: pointer;
+}
+
+.fa-github,
+.fa-linkedin-in {
+  margin: 10px 20px 20px 0px;
+  font-size: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+  background-color: rgb(68, 26, 195);
+  background-clip: text;
+  border-radius: 5px;
+  -webkit-text-fill-color: transparent;
+  transition: all 250ms ease-in;
+
+}
+
+.fa-github:hover,
+.fa-linkedin-in:hover {
+  background-color: red;
+  font-size: 50px;
+
+}
+.assets .Link{
+  
+    text-decoration: none;
+  
+}
+
+/* About */
+.contentPage {
+  margin-top: 10px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+ 
+}
+
+.user-image-content {
+
+ 
+  width: 270px;
+  height: 325px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px 1px;
+  object-fit: cover;
+  position: relative;
+  top: 100px;
+  left: 20px;
+
+}
+
+.aboutText>p,
+.aboutText>h1 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  font-family: "Langar", system-ui;
+}
+
+#aboutText {
+  text-align: justify;
+  margin: 0px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.aboutBox {
+  height: 150px;
+  width: 300px;
+  margin: 20px 0px 10px 0px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 1px;
+    
+}
+
+.educationBox {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 60%;
+  align-items: center;
+  font-size: 25px;
+  margin-left: 50px;
+  background-color: rgba(255, 255, 0, 0.2);
+
+  
+}
+
+.experienceBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  margin-left: 100px;
+  background-color: rgba(255, 255, 0, 0.2);
+  padding-bottom: 100px;
+
+}
+
+.fa-solid {
+  margin-top: 10px;
+}
+
+.aboutMe>p {
+  margin: 30px 50px 0px 50px;
+  text-align: justify;
+  font-size: 20px;
+  
+}
+
+.experienceBox>p,
+.educationBox>p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+}
+
+#exp-head,
+#project>h2, #footer{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Langar", system-ui;
+}
+
+#exp-head>h1,
+#project>h2 {
+  margin-top: 2px;
+  padding-left: 70vmin;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+#skillsAndExperience {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  justify-content: space-between;
+  
+}
+
+.experience
+ {
+  width: 45%;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px #ccc;
+  background-color: rgba(255, 255, 0, 0.2);
+ 
+}
+
+.experience > h3 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  
+}
+
+.experience > h3 > img{
+
+  margin: 20px;
+
+}
+
+.experience > p{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+
+}
+
+.skills{
+  width: 45%;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px #ccc;
+  background-color: rgba(255, 255, 0, 0.2);
+ 
+}
+
+.experience>h2,
+.skills>h2 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.experience>h3,
+.skills>h3 {
+  margin-left: 30px;
+}
+
+ul>li {
+  list-style: none;
+  margin: 15px 0px 0px 40px;
+}
+
+.skills>ul>li>i {
+  font-size: 25px;
+  margin-right: 40px;
+
+}
+
+.skillKnowledge {
+  margin: 15px 0px 15px 60px;
+  text-indent: 50px;
+}
+
+#footer{
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: rgba(255, 255, 0, 0.2);
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Langar", system-ui;
+}
+#footer>p{
+  text-align: center;
+}
+
+
+#contact{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+ 
+}
+.contact{
+  color: #2b5ecb;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#contact>li>img{
+ 
+  margin-left: 10px;
+  width: 140px;
+  height: 140px;
+  margin-top: -50px;
+}
+#contact>li>i{
+
+  margin-right: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
+#rights{
+  text-align: center;
+  font-size: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px;
+
+}
