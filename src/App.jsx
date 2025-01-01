@@ -16,7 +16,7 @@ const App = () => {
     <Navbar/>
     <main style={{ flex: 1 }}>
     <Routes>
-      <Route path='/portfolio-muthu' element={<Home/>}>
+      <Route path='/' element={<Home/>}>
          <Route to='/contact' element={<Contact/>}/>
       </Route>
       <Route path='/about' element={<About/>}/>
