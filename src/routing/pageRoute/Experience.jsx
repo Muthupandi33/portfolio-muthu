@@ -1,6 +1,6 @@
 import React from 'react'
 import CompanyLogo from './src-doc/focus-edu-logo.webp'
-import {FaJava, FaHtml5, FaCss3, FaJs, FaDatabase , FaGithub, FaReact } from "react-icons/fa";
+
 
 
 const Experience = () => {
@@ -40,26 +40,26 @@ const Experience = () => {
                  <h2>Technical skills</h2>
                  <br />
                      <ul>
-                         <li><i class="fa-brands fa-java"> <FaJava/></i>Core Java<br />
+                         <li><i class="fa-brands fa-java"> </i>Core Java<br />
                              <div class="skillKnowledge">
                                  Intermediate</div>
                          </li>
-                         <li><i class="fa-brands fa-html5"><FaHtml5/></i>HTML<br/>
+                         <li><i class="fa-brands fa-html5"></i>HTML<br/>
                              <div class="skillKnowledge">Intermediate</div>
                          </li>
-                         <li><i class="fa-brands fa-css3-alt"><FaCss3/></i>CSS<br/>
+                         <li><i class="fa-brands fa-css3-alt"></i>CSS<br/>
                              <div class="skillKnowledge">Intermediate</div>
                          </li>
-                         <li><i class="fa-brands fa-js"> <FaJs/></i>Java Script<br/>
+                         <li><i class="fa-brands fa-js"> </i>Java Script<br/>
                              <div class="skillKnowledge">Intermediate</div>
                          </li>
-                         <li><i class="fa-solid fa-database"> <FaDatabase/> </i>SQL<br/>
+                         <li><i class="fa-solid fa-database"> </i>SQL<br/>
                              <div class="skillKnowledge">Intermediate</div>
                          </li>
-                         <li><i class="fa-brands fa-square-github"><FaReact/></i>React Js <br/>
+                         <li><i class="fa-brands fa-react"></i>React Js <br/>
                              <div class="skillKnowledge">Intermediate</div>
                          </li>
-                         <li><i class="fa-brands fa-square-github"> <FaGithub/></i>Git and Git Hub <br/>
+                         <li><i class="fa-brands fa-square-github"> </i>Git and Git Hub <br/>
                              <div class="skillKnowledge">Basic</div>
                          </li>
                      </ul>
