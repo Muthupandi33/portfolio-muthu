@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio-muthu/static/css/main.9e55cce5.css",
-    "main.js": "/portfolio-muthu/static/js/main.dc5e79d8.js",
+    "main.css": "/portfolio-muthu/static/css/main.e48d3b99.css",
+    "main.js": "/portfolio-muthu/static/js/main.e43b0cb8.js",
+    "static/media/d&d.png": "/portfolio-muthu/static/media/d&d.97d23af4ac87e2032b85.png",
     "static/media/IMG_20240807_213618.jpg": "/portfolio-muthu/static/media/IMG_20240807_213618.08d8780a825f2fd638cc.jpg",
     "static/media/JavaDeveloper_Muthupandi.pdf": "/portfolio-muthu/static/media/JavaDeveloper_Muthupandi.2c9a9a836dea2b9c7111.pdf",
+    "static/media/text.jpg": "/portfolio-muthu/static/media/text.5f6f83c6e602b5f4f12b.jpg",
+    "static/media/write-something.webp": "/portfolio-muthu/static/media/write-something.3c95e6aa2ee1e549aed9.webp",
+    "static/media/clan.jpg": "/portfolio-muthu/static/media/clan.aa8ca9399da6a41e5b9c.jpg",
+    "static/media/empmanage.png": "/portfolio-muthu/static/media/empmanage.7a2b3200e4b9c6020c86.png",
     "static/media/portfolio.png": "/portfolio-muthu/static/media/portfolio.3efa1a4fa07899e1e528.png",
     "static/media/focus-edu-logo.webp": "/portfolio-muthu/static/media/focus-edu-logo.77a51501b25a1cbea7ff.webp",
     "index.html": "/portfolio-muthu/index.html",
-    "main.9e55cce5.css.map": "/portfolio-muthu/static/css/main.9e55cce5.css.map",
-    "main.dc5e79d8.js.map": "/portfolio-muthu/static/js/main.dc5e79d8.js.map"
+    "main.e48d3b99.css.map": "/portfolio-muthu/static/css/main.e48d3b99.css.map",
+    "main.e43b0cb8.js.map": "/portfolio-muthu/static/js/main.e43b0cb8.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e55cce5.css",
-    "static/js/main.dc5e79d8.js"
+    "static/css/main.e48d3b99.css",
+    "static/js/main.e43b0cb8.js"
   ]
 }
